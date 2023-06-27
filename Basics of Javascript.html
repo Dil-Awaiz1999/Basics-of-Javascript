@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of JavaScript</title>
+</head>
+<body>
+    <h1>hello world</h1>
+
+
+
+
+    <script>
+        console.log("hello world")
+        // list of characters "string"
+        console.log('3')
+        // integer
+        console.log(3.4)
+        // floating point number
+        console.log(3.4)
+        // double
+        console.log('4+4 = ' + 8)
+        //concatination "+" used to pair two things, string and any other number
+        console.log(`4 + 4 = ${4+4}, 5 * 5 = ${5*5}`)
+        //bactics/template strings{interpotation method}
+        console.log(true)
+        console.log(false)
+        //booleans
+
+        //variable=store data/value
+        // let
+        // const
+        // var 
+        let name = "Saad"
+        console.log('ali is a boy, ali is 18 years old, ali is a developer')
+        console.log(`${name} is a boy, ${name} is 18 years old, ${name} is a developer`)
+        
+        const pi = 3.14;
+        console.log(pi)
+        console.log(`this a value of ${pi}`)
+
+        // let number = 10;
+        // if(number > 10) {
+        //     console.log("number is big")
+        // }
+        // else(
+        //     console.log("number is small")
+        // )
+
+        let english,math,urdu,total,obtained
+        name = 'Ali' //multiple conditions
+        total = 300 //total marks of subjects
+        english = 70
+        math = 50
+        urdu = 60
+        obtained = english + math + urdu;
+        percentage = (obtained/total) * 100; //outputs a number
+        console.log(percentage + '%')
+        if(percentage > 50 || name === 'Ali' && percentage > 70 ){    //===strong checking, it also check data types
+            console.log('pass')
+        }
+        else(
+            console.log('fail')
+        )
+
+        console.log(percentage + '%')
+        if(percentage > 90 || name === 'Ali'){
+            console.log('pas with A*');
+        }
+        if(percentage > 80){
+            console.log('pas with A');
+        }
+        else{
+            console.log('fail');
+        }
+
+        let number = 10; //ternary condition , Advance form of if else
+        number > 10 ? console.log('greater') : console.log('small'); 
+
+        //switch condition, linear form of if else
+        let a=10;
+        switch(a){
+            case 9:
+                console.log('smaller')
+                break;
+            case 10:
+                 console.log('equal')
+                break;
+            default:
+                console.log('nothing')
+                break;
+        }
+        //rages
+        let b=9;
+        switch(true){
+            case (b>10):
+                console.log('greater')
+                break;
+            case (b<10):
+                 console.log('smaller')
+                break;
+            default:
+                console.log('equal')
+                break;
+        }
+        
+            // for loop, while loop, do while loop
+            for(let start = 0; start <1000; start++){
+                // console.log(start)
+                if(start<9){
+                    console.log(`0${start+1}`)
+                }
+                else{
+                    console.log(start+1)
+                }
+            }
+
+            for(let i =1; i<=20; i++){
+                console.log(`2 * ${i} = ${2*i}`)
+            }
+            // //A-Z=65-97, a-z=97-122
+            // for(let c = 65; c<=90; c++){
+            //     console.log(string.fromcharcode(c))
+            //     consol.log(string.fromcharcode(c+32))
+            // }
+            //continue
+            for(let n=1; n<=10; ++n){
+                if(n == 5){
+                    continue
+                }
+                else{
+                    console.log(n);
+                }
+            }
+            for(let b=1; b<=10; ++b){
+                if(b == 5){
+                    break //exit
+                }
+                console.log(b);
+                
+            }
+            //while
+            let m = 0;
+            while(m<10){
+                console.log(m);
+                m++
+            }
+            let table = 0;
+            while(table<10){
+                console.log(`3 * ${table} = ${table*3}`)
+                table++
+            }
+            //do while
+            let t = 0;
+            do{
+                console.log(t)
+                t++
+            }while (t<10)
+
+            
+            // define variable names with camelCases first word with small and 2nd with capital
+            //define function names with PascalCases, both words with capital
+            function MarkSheet(name,fatherName,physics,chemistry,bio,total){
+                let obtainedMarks = physics + chemistry + bio;
+                let percentage =((obtainedMarks/total) * 100).toFixed(2); //fix decimal point by 2
+                console.log(`peace:${name}`);
+                console.log(`physics:${physics}`);
+                console.log(`chemistry:${chemistry}`);
+                console.log(`bio:${bio}`);
+                console.log(`total marks:${obtainedMarks}`);
+                console.log(`percentage:${percentage}`);
+                if(percentage > 50){
+                    console.log(`status:Pass`)
+                }
+                else{
+                    console.log(`status:fail`)
+                }
+                console.log('')  
+                }
+            
+            MarkSheet('Ali',90,50,90,300)
+            MarkSheet('Akmal',90,0,90,300)
+
+            //new method of function
+            const Testfunction = (name,fatherName,physics,chemistry,bio,total) =>{
+                let obtainedMarks = physics + chemistry + bio;
+                let percentage =((obtainedMarks/total) * 100).toFixed(2); //fix decimal point by 2
+                console.log(`peace:${name}`);
+                console.log(`physics:${physics}`);
+                console.log(`chemistry:${chemistry}`);
+                console.log(`bio:${bio}`);
+                console.log(`total marks:${obtainedMarks}`);
+                console.log(`percentage:${percentage}`);
+                if(percentage > 50){
+                    console.log(`status:Pass`)
+                }
+                else{
+                    console.log(`status:fail`)
+                }
+                console.log('')
+            }
+            Testfunction('Aliya',90,50,90,300)
+            Testfunction('Sidra',90,0,90,300)
+            
+            let myArray = [1,2,3,4,5,6,7,8,9,'a','g']
+            console.log(myArray[4])
+            
+            let array = [1,2,3,4,5,6,7,8,9,'a','g']
+            let i = 0;
+            while(i<=13){
+                console.log(Array[i])
+            } 
+            console.log(myArray.length)
+
+            function search(myArr,searchedValue){
+                console.log(myArr)
+            }
+            search([4,5,6,7,8,9])
+        </script>
+</body>
+</html>
